@@ -1,9 +1,9 @@
-FROM centos:8 
+FROM centos:7
 
 RUN set -eux; \
+    localedef -i en_US -f UTF-8 en_US.UTF-8; \
     yum update -y; \
-    yum install -y yum-utils createrepo \
-    echo "export LC_ALL=en_US.UTF-8"  >>  /etc/profile
+    yum install -y createrepo
 
 
 COPY repo/*.repo /etc/yum.repos.d
