@@ -6,7 +6,7 @@ RUN set -eux; \
     yum install -y createrepo
 
 
-COPY repo/*.repo /etc/yum.repos.d
+COPY repo/*.repo /etc/yum.repos.d/
 COPY repo/*.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/*.sh
 
