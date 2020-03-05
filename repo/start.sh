@@ -3,8 +3,11 @@
 #同步软件包
 
 echo 开始从mirrors.aliyun.com同步数据
-reposync -n --repoid=extras7 --repoid=updates7 --repoid=base7  --repoid=centos-7-epel -p /data/repo/CentOS/7/x86_64/
-reposync -n --repoid=extras8 --repoid=AppStream8 --repoid=base8  --repoid=centos-8-epel --repoid=centos-8-epel-modular -p /data/repo/CentOS/8/x86_64/
+reposync -n --repoid=extras7 --repoid=updates7 --repoid=base7 -p /data/repo/CentOS/7/x86_64/
+reposync -n --repoid=extras8 --repoid=AppStream8 --repoid=base8 -p /data/repo/CentOS/8/x86_64/
+reposync -n --repoid=centos-7-epel -p /data/repo/CentOS/epel/7/x86_64/
+reposync -n --repoid=centos-8-epel --repoid=centos-8-epel-modular -p /data/repo/CentOS/epel/8/x86_64/
+
 reposync -n --repoid=docker-ce-stable --repoid=docker-ce-edge -p /data/repo/CentOS/docker
 echo 数据同步结束
 
